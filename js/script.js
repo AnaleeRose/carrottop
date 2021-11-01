@@ -2,7 +2,7 @@ let voteBtns = document.querySelectorAll(".voteBtn")
 
 voteBtns.forEach(element => {
     element.addEventListener("click", function (e){
-        console.log(e)
+        e.preventDefault();
         let voteResponse = document.querySelectorAll('[name="vote_response"]')
         voteResponse.value = e.data-vote-response;
         console.log(voteResponse)
