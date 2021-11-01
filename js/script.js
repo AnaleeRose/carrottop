@@ -1,9 +1,15 @@
-let voteBtns = document.querySelectorAll(".voteBtn")
+const voteBtns = document.querySelectorAll(".voteBtn")
+
+document.addEventListener("ready", function(){
+    pollResults
+    // ajaxCall("./php/poll.php?vote=")
+    ajaxCall("http://savannahskinner.com/poll.php?vote=")
+})
 
 voteBtns.forEach(function(element){
     element.addEventListener("click", function(e){
         e.preventDefault();
-        let voteResponse = document.querySelectorAll('[name="vote_response"]')
+        let voteResponse = document.querySelector('[name="vote_response"]')
         voteResponse.setAttribute("value", element.getAttribute("data-vote-response"));
         console.log(voteResponse)
     })
@@ -12,7 +18,10 @@ voteBtns.forEach(function(element){
 function ajaxCall(fetch_url, body = false, testing = true) {
 	console.log("run ajax call")
     if (body === true) {
+        fetch_url = fetch_url + "true"
         body = new FormData(document.querySelector("#pollForm"));
+    } else {
+        fetch_url = fetch_url + "false"
     }
     fetch(fetch_url, {
         method: 'POST',
