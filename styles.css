@@ -8,10 +8,6 @@ ul {
   background-color: #457B1C;
 }
 
-li {
-  float: left;
-}
-
 li a {
   display: block;
   color: white;
