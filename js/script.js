@@ -1,9 +1,9 @@
 const voteBtns = document.querySelectorAll(".voteBtn")
 
 document.addEventListener("ready", function(){
-    // pollResults
+    pollResults
     // ajaxCall("./php/poll.php?vote=")
-    ajaxCall("https://savannahskinner.com/poll.php?vote=")
+    ajaxCall("http://savannahskinner.com/poll.php?vote=")
 })
 
 voteBtns.forEach(function(element){
@@ -26,7 +26,7 @@ function ajaxCall(fetch_url, body = false, testing = true) {
     fetch(fetch_url, {
         method: 'POST',
         headers: {
-            Access-Control-Allow-Origin: *
+            'Access-Control-Allow-Origin': *
         },
         redirect: 'follow',
         body: body,
