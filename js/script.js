@@ -1,7 +1,7 @@
 const voteBtns = document.querySelectorAll(".voteBtn")
 
 document.addEventListener("ready", function(){
-    pollResults
+    // pollResults
     // ajaxCall("./php/poll.php?vote=")
     ajaxCall("https://savannahskinner.com/poll.php?vote=")
 })
