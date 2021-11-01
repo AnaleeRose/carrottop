@@ -1,3 +1,14 @@
+let voteBtns = document.querySelectorAll(".voteBtn")
+
+voteBtns.forEach(element => {
+    element.addEventListener("click", function (e){
+        console.log(e)
+        let voteResponse = document.querySelectorAll('[name="vote_response"]')
+        voteResponse.value = e.data-vote-response;
+        console.log(voteResponse)
+    })
+});
+
 function ajaxCall(fetch_url, body = false, testing = true) {
 	console.log("run ajax call")
     if (body === true) {

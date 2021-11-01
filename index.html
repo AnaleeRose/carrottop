@@ -35,7 +35,19 @@
     <section class="poll">
         <h2>Which should be the next game?</h2>
         <form class="pollForm">
+            <input type="hidden" name="vote" value=true>
+            <input type="hidden" name="vote_response" value=false>
 
+            <div class="optionOne">
+                <h3>Story Idea 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="voteBtn" data-vote-response="option_1">Vote?</button>
+            </div>
+            <div class="optionTwo">
+                <h3>Story Idea 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="voteBtn" data-vote-response="option_2">Vote?</button>
+            </div>
         </form>
         <div class="pollResults">
             <div class="pollOptionOne">
