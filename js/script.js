@@ -25,9 +25,9 @@ function ajaxCall(fetch_url, body = false, testing = true) {
     }
     fetch(fetch_url, {
         method: 'POST',
-        // headers: {
-        //     'Accept':\ */*
-        // },
+        headers: {
+            Access-Control-Allow-Origin: *
+        },
         redirect: 'follow',
         body: body,
         // cors: "same-origin",
