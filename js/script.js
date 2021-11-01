@@ -3,7 +3,7 @@ const voteBtns = document.querySelectorAll(".voteBtn")
 document.addEventListener("ready", function(){
     pollResults
     // ajaxCall("./php/poll.php?vote=")
-    ajaxCall("http://savannahskinner.com/poll.php?vote=")
+    ajaxCall("https://savannahskinner.com/poll.php?vote=")
 })
 
 voteBtns.forEach(function(element){
